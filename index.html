@@ -1,39 +1,97 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title> James Glennan 4078160 Assignment 3 COMP804 </title>
-    <script>
-      // JS goes here
-    </script>
-    <style>
-      /* task 1 */
-      #headerBlock {
-          background-color: #f8f9fb;
-          padding: 20px;
-          text-align: center;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px #c3c3c3;
-          font-family: Helvetica, Arial, sans-serif;
-          color: #040136;
-        }
 
-      #headerBlock h1 {
-        font-weight: bold;
-        }
+<head>
+  <meta charset="utf-8" />
+  <title> James Glennan 4078160 Assignment 3 COMP804 </title>
+  <script>
+    // JS goes here
+  </script>
+  <style>
+    /* task 1 */
+    #headerBlock {
+      background-color: #f8f9fb;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px #c3c3c3;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #040136;
+    }
 
-      #headerBlock h2 {
-        font-weight: normal;
-        }
+    #headerBlock h1 {
+      font-weight: bold;
+    }
 
-      #headerBlock h3 {
-        font-weight: lighter;
-        font-style: italic;
-        }
+    #headerBlock h2 {
+      font-weight: normal;
+    }
 
-        /* end task 1 */
+    #headerBlock h3 {
+      font-weight: lighter;
+      font-style: italic;
+    }
 
-    </style>
-  </head>
+    /* end task 1 */
+
+    #dateTable {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Helvetica Neue, Arial, sans-serif;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px #000000;
+      overflow: hidden;
+    }
+
+    #dateTable thead {
+      border: 1px solid black;
+      overflow: hidden;
+      background-color: #292f3b;
+      color: #f8f9fb;
+      text-align: left;
+    }
+
+    #dateTable thead p {
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+
+    #dateTable thead td {
+      border-bottom: 1px double #f8f9fb;
+
+    }
+
+    #dateTable tbody {
+      background-color: #f8f9fb;
+      color: #263656;
+      font-style: oblique;
+    }
+
+    #dateTable tbody .evenRow {
+      background-color: #2387ae75;
+    }
+
+    #dateTable tbody tr {
+      border: 3px outset #c9daff;
+      padding: 10px;
+    }
+
+    #dateTable .firstColumn {
+      width: 72%;
+      border: inherit;
+      padding: 10px;
+    }
+
+    #dateTable .secondColumn {
+      width: 28%;
+      border: inherit;
+      padding: 10px;
+      border-left: 3px solid #e8e8e8;
+    }
+
+  </style>
+</head>
+
 <body>
   <!-- task 1 -->
   <div id="headerBlock">
@@ -43,6 +101,181 @@
   </div>
 
   <!-- end task 1 -->
-  </body>
+
+  <!-- task 2 -->
+  <table id="dateTable">
+    <thead>
+      <tr id="headerRow">
+        <td class="firstColumn">
+          <p>Activity</p>
+        </td>
+        <td class="secondColumn">
+          <p>Date</p>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>First day to enrol for re-enrolling (continuing students)</p>
+        </td>
+        <td class="secondColumn">
+          <p>18 Nov 2024</p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p> First day to enrol for new students (commencing students)</p>
+        </td>
+        <td class="secondColumn">
+          <p>02 Dec 2024</p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Orientation</p>
+        </td>
+        <td class="secondColumn">
+          <p>24 Feb - 27 Feb 2025 (Wollongong campus)</p>
+          <br>
+          <p>Further information about Orientation is available <a
+            href="https://www.uow.edu.au/student/get-started/orientation/">here</a></p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Lectures Commence (weeks 1-7)</p>
+        </td>
+        <td class="secondColumn">
+          <p>03 Mar - 18 Apr 2025</p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Last day to enrol / add subjects yourself</p>
+        </td>
+        <td class="secondColumn">
+          <p>14 Mar 2025</p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Last day to enrol / add subjects with Head of Students approval</p>
+        </td>
+        <td class="secondColumn">
+          <p>21 Mar 2025</p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>First day to enrol for re-enrolling (continuing students)</p>
+        </td>
+        <td class="secondColumn">
+          <p>18 Nov 2024</p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          First day to enrol for new students (commencing students)
+        </td>
+        <td class="secondColumn">
+          <p>21 Mar 2025</p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Census Date</p>
+          <ul>
+            <li>Fees due</li>
+            <li>Last day to withdraw from subject/s without paying for them</li>
+            <li>HECS / FEE HELP debt reporting date</li>
+            <li>Last day to change HECS / FEE HELP billing option</li>
+          </ul>
+          <p>
+            <a href="https://uowedu.service-now.com/askuow?id=kb_article_view&sysparm_article=KB0012659">Learn more
+              about Census date &gt;</a>
+          </p>
+        </td>
+        <td class="secondColumn">
+          <p>31 Mar 2025</p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Student Services and Amenities Fees Due</p>
+        </td>
+        <td class="secondColumn">
+          <p>01 Apr 2025</p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Last day to withdraw without academic penalty - subject deleted from record</p>
+          <p>Fail grade recorded if subject withdrawn after this date</p>
+        </td>
+        <td class="secondColumn">
+          <p>09 May 2025</p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Mid-Session Recess (1 week)</p>
+        </td>
+        <td class="secondColumn">
+          <p>21 Apr - 25 Apr 2025</p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Lectures Recommence (weeks 8-13)</p>
+        </td>
+        <td class="secondColumn">
+          <p>28 Apr - 06 Jun 2025</p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Study Recess (1 week)</p>
+        </td>
+        <td class="secondColumn">
+          <p>09 Jun - 13 Jun 2025</p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Exams (2 weeks)</p>
+        </td>
+        <td class="secondColumn">
+          <p>14 Jun - 26 Jun 2025</p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Mid-Year Recess / End of session break (4 weeks)</p>
+        </td>
+        <td class="secondColumn">
+          <p>30 Jun - 25 Jul 2025</p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Release of Results</p>
+        </td>
+        <td class="secondColumn">
+          <p>10 Jul 2025</p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Supplementary and deferred exam period</p>
+        </td>
+        <td class="secondColumn">
+          <p>21 Jul - 25 Jul 2025</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- end task 2 -->
+</body>
 
 </html>
