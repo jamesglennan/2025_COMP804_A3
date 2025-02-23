@@ -36,7 +36,7 @@
     #dateTable {
       width: 100%;
       border-collapse: collapse;
-      font-family: Helvetica Neue, Arial, sans-serif;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       margin-top: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px #000000;
@@ -89,6 +89,55 @@
       border-left: 3px solid #e8e8e8;
     }
 
+    /* task 3 */
+    #webAttackTable {
+      margin-top: 20px;
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Courier New', Arial, sans-serif;
+      border-radius: 3px;
+      box-shadow: 0 2px 6px black;
+      overflow: hidden;
+    }
+
+    #webAttackTable thead {
+      font-family: Copperplate, AppleGothic, Ayathuya, Arial, sans-serif;
+      border: 1px solid #02313a;
+      overflow: hidden;
+      background-color: #193942;
+      color: #f8f9fb;
+      text-align: left;
+    }
+
+    #webAttackTable thead td {
+      border-bottom: 1px double #f8f9fb;
+      padding: 10px;
+    }
+
+    #webAttackTable tbody {
+      background-color: #f8f9fb;
+    }
+
+    #webAttackTable tbody tr {
+      border-bottom: 3px outset #e0f7fa;
+    }
+
+    #webAttackTable tbody .evenRow {
+      background-color: #e0f7fa;
+    }
+
+    #webAttackTable tbody .secondColumn {
+      border-left: 3px outset #e0f7fa;
+      width: 60%;
+    }
+
+    .attackImages {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+    }
+
+    /* end task 3 */
   </style>
 </head>
 
@@ -139,7 +188,7 @@
           <p>24 Feb - 27 Feb 2025 (Wollongong campus)</p>
           <br>
           <p>Further information about Orientation is available <a
-            href="https://www.uow.edu.au/student/get-started/orientation/">here</a></p>
+              href="https://www.uow.edu.au/student/get-started/orientation/">here</a></p>
         </td>
       </tr>
       <tr class="evenRow">
@@ -276,6 +325,170 @@
     </tbody>
   </table>
   <!-- end task 2 -->
+
+  <!-- task 3 -->
+  <table id="webAttackTable">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Web Attacks</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>SQL Injection</p>
+          <img class="attackImages" src="images/sqlinjection.png" alt="SQL Injection">
+        </td>
+        <td class="secondColumn">
+          <p> SQL Injection refers to when an attacker is able to inject arbitrary
+            SQL queries by overloading unsanitised input. If a malicious user identifies unsanitied inputs, they can
+            input at semicolon and insert a new query to extract or modify date.
+            <br>
+            Source:<a
+              href="https://blogs.zeiss.com/digital-innovation/en/lets-talk-about-security-sql-injection/">https://blogs.zeiss.com/digital-innovation/en/lets-talk-about-security-sql-injection/</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Cross-Site Scripting (XSS)</p>
+          <img class="attackImages" src="images/xss.png" alt="Cross-Site Scripting">
+        </td>
+        <td class="secondColumn">
+          <p>
+            Custom Javascript is maliciously injected into a users browser session without the knowledge of the user. An
+            instruction to download a script
+            (sometimes in for example the comments section of website). The script can then be used to steal cookies,
+            session tokens, or other sensitive information.
+            <br>
+            Source: <a
+              href="https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/">https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Cross-Site Request Forgery (CSRF)</p>
+          <img src="images/csrf.jpeg" alt="Cross-Site Request Forgery" class="attackImages">
+        </td>
+        <td class="secondColumn">
+          <p>
+            CSRF is an attack that is an extension on XSS. When a person tries to do a priveleged action, the attacker is able to intercepts
+            the attack and perform that action on behalf of the user, but modify the paramters in such a way that isn't noticable to the user.
+            <br>
+            Source: <a
+              href="https://www.wallarm.com/what/what-is-cross-site-request-forgery">https://www.wallarm.com/what/what-is-cross-site-request-forgery</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Denial of Service (DoS)</p>
+          <img src="images/dos.png" alt="Denial of Service" class="attackImages">
+        </td>
+        <td class="secondColumn">
+          <p>
+            A DoS attack is an attack that limits the availability of a service to users by overloading the server with requests. This can be done by spamming
+            requests to the server and causing it to crash, or by sending a large amount of data to the server to fill up the servers memory.
+            A particula type of DoS attack is a DDoS attack, which is when multiple devices are used to attack a server.
+            <br>
+            Source: <a href="https://www.cloudflare.com/en-au/learning/ddos/what-is-a-ddos-attack/">https://www.cloudflare.com/en-au/learning/ddos/what-is-a-ddos-attack/</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Man-in-the-Middle (MitM)</p>
+          <img src="images/mitm.webp" alt="Man in the Middle" class="attackImages">
+        </td>
+        <td class="secondColumn">
+          <p>
+            A man in the middle attack is an attack where the victim is tricked into communicating through the attacker, allowing the attacker
+            to manipulate or read the data being sent to or from the victim.
+            <br>
+            Source: <a href="https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/">https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Phishing</p>
+          <img src="images/phishing.png" alt="Phishing" class="attackImages">
+        </td>
+        <td class="secondColumn">
+          <p>
+            A phishing attack is where a victim is convinced into clicking a link sent to them by a malicious actor, using fear or greed to trick them into
+            thinking the message they're being sent is legitimiate. Once the link is clicked, user may be tricked into downloading malware, or entering credentials into
+            a fake website.
+            <br>
+            Source: <a href="https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/">https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Brute Force Attack</p>
+          <img src="images/bruteforce.png" alt="Brute Force Attack" class="attackImages">
+        </td>
+        <td class="secondColumn">
+          <p>
+            A brute force attack is where an attack attempts to guess the password for a user by systematically trying username and password guesses.
+            Once the attacker has the correct credentials, they are able to access the account, steal information, manipulate date or change the password
+            to deny the original use access to their account.
+            <br>
+            Source: <a href="https://www.spiceworks.com/it-security/cyber-risk-management/articles/what-is-brute-force-attack/">https://www.spiceworks.com/it-security/cyber-risk-management/articles/what-is-brute-force-attack/</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Remote Code Execution</p>
+          <img src="images/rce.jpeg" alt="Remote Code Execution" class="attackImages">
+        </td>
+        <td class="secondColumn">
+          <p>
+            Remote code execution is where an attacker is able to run code on a victims machine without their knowledge. By getting this arbitrary code to run, Attackers
+            can take over machines, steal data or disrupt service.
+            <br>
+            Source: <a href="https://patchmypc.com/remote-code-execution-vulnerabilty">https://patchmypc.com/remote-code-execution-vulnerabilty</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="evenRow">
+        <td class="firstColumn">
+          <p>Directory Traversal</p>
+          <img src="images/directorytraversal.png" alt="Directory Traversal" class="attackImages">
+        </td>
+        <td class="secondColumn">
+          <p>
+            A directory traversal attack is where an attacker is able to access files and directories that are outside of
+            where the web administrator intended, by manipulating the address input whether directly by the path or by some sort of paramter.
+            Attackers can use this access to extract secret or sensitive data.
+            <br>
+            Source: <a href="https://www.fastly.com/learning/what-is-directory-traversal">https://www.fastly.com/learning/what-is-directory-traversal</a>
+          </p>
+        </td>
+      </tr>
+      <tr class="oddRow">
+        <td class="firstColumn">
+          <p>Cryptojacking</p>
+          <img src="images/cryptojacking.webp" alt="Cryptojacking" class="attackImages">
+        </td>
+        <td class="secondColumn">
+          <p>
+            Cryptojacking is an attack where a victim is tricked into running a cryptomining script on their machine when they visit a website.
+            The script runs in the background without their knowledge (a particular type of remote code execution), while cryptocurrency is mined for the attacker.
+            <br>
+            Source: <a href="https://securityintelligence.com/posts/cryptojacking-attacks-whos-mining-on-your-coin/">https://securityintelligence.com/posts/cryptojacking-attacks-whos-mining-on-your-coin/</a>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- end task 3 -->
+
+
 </body>
 
 </html>
