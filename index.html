@@ -4,10 +4,54 @@
   <meta charset="utf-8" />
   <title> James Glennan 4078160 Assignment 3 COMP804 </title>
   <script>
-    // JS goes here
+    // task 4
+    function animalButtonClick(animal) {
+      // Clear the colour for all the buttons
+      buttons = document.getElementsByClassName('animalButton');
+      for (i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = "";
+      }
+
+      //set the colour of the selected button
+      selectedButton = document.getElementById(animal + 'Button');
+      selectedButton.style.backgroundColor = "#3d96f5";
+
+      // Get document elements to set
+      img = document.getElementById('animalImage');
+      inputTextBox = document.getElementById('animalInput');
+      outputTextPara = document.getElementById('animalOutput');
+
+      // Set text values
+      inputText = "User clicks " + animal
+      outputText = animal + " is clicked"
+
+      inputTextBox.value = inputText;
+      outputTextPara.innerHTML = outputText;
+      imageSource = "images/";
+      //Get image source
+      if (animal == 'cat') {
+        imageSource = imageSource+"cat.jpeg"
+      } else if (animal == 'dog') {
+        imageSource = imageSource+"dog.jpeg"
+      } else if (animal == 'frog') {
+        imageSource = imageSource+"frog.jpeg"
+      }
+      img.src = imageSource;
+      img.style.display = "block";
+      img.alt = animal + " image";
+    }
+    // end task 4
   </script>
   <style>
     /* task 1 */
+
+    h2 {
+      text-align: left;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #040136;
+      font-weight: bold;
+      margin-top: 20px;
+    }
     #headerBlock {
       background-color: #f8f9fb;
       padding: 20px;
@@ -24,6 +68,7 @@
 
     #headerBlock h2 {
       font-weight: normal;
+      text-align: center;
     }
 
     #headerBlock h3 {
@@ -132,12 +177,37 @@
     }
 
     .attackImages {
-      width: 200px;
-      height: 100px;
+      width: 300px;
       margin: 10px;
     }
 
     /* end task 3 */
+
+    /* task 4 */
+
+      .animalButton{
+        width: 40px
+      }
+
+
+      #animalImage{
+        width: 500px;
+        margin-top: 10px;
+      }
+
+      #animalInput {
+        width: 130px;
+        font-family: 'Helvetica Nue', Arial, sans-serif;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      #animalOutput {
+        font-family: 'Helvetica Nue', Arial, sans-serif;
+        font-size: 20px;
+        margin: 0px 0px 0px 0px;
+      }
+    /* end task 4 */
   </style>
 </head>
 
@@ -148,10 +218,10 @@
     <h2>COMP804: Web Security</h2>
     <h3>Assignment 3, Due end of Week 5 (03/03/2025)</h3>
   </div>
-
   <!-- end task 1 -->
 
   <!-- task 2 -->
+  <h2>Task 2</h2>
   <table id="dateTable">
     <thead>
       <tr id="headerRow">
@@ -327,6 +397,7 @@
   <!-- end task 2 -->
 
   <!-- task 3 -->
+  <h2>Task 3</h2>
   <table id="webAttackTable">
     <thead>
       <tr>
@@ -489,6 +560,20 @@
   <!-- end task 3 -->
 
 
+  <!-- task 4 -->
+  <h2>Task 4</h2>
+
+  <button id="catButton" class="animalButton" onclick="animalButtonClick('cat')">Cat</button>
+  <button id="dogButton" class="animalButton" onclick="animalButtonClick('dog')">Dog</button>
+  <button id="frogButton" class="animalButton" onclick="animalButtonClick('frog')">Frog</button>
+  <br>
+  <input type="text" id="animalInput" placeholder="">
+  <p id="animalOutput"></p>
+  <img id="animalImage" src="" alt="animal image" style="display: none;">
+  <!-- Cat pic source: https://commons.wikimedia.org/wiki/File:Felis_silvestris_catus_lying_on_rice_straw.jpg -->
+  <!-- Dog pic source: https://commons.wikimedia.org/wiki/File:Dog_(Canis_lupus_familiaris)_(7).jpg -->
+   <!-- Frog pic source:  https://commons.wikimedia.org/wiki/File:Rhacophorus_nigropalmatus.jpg -->
+  <!-- end task 4 -->
 </body>
 
 </html>
